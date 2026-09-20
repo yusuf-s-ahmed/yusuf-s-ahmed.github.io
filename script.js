@@ -3,7 +3,7 @@ const links = {
   github: "https://github.com/yusuf-s-ahmed",
   linkedin: "https://www.linkedin.com/in/yusuf-s-ahmed",
   llm: "https://github.com/yusuf-s-ahmed/local-llm-agentic-system",
-  molecules: "https://github.com/yusuf-s-ahmed/drug-classification-experiment",
+  molecules: "https://github.com/yusuf-s-ahmed/molecular-classification-experiment",
 };
 
 document.querySelectorAll("[data-link]").forEach((anchor) => {
