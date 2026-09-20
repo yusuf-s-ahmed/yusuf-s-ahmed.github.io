@@ -46,7 +46,7 @@ body.modal-open { overflow: hidden; }
 .dialog-github { display: inline-block; margin-top: 22px; font-size: 16px; text-underline-offset: 4px; }
 .experience { margin-top: 125px; }
 .experience-list { margin-top: 63px; display: grid; gap: 65px; }
-.role { display: flex; justify-content: space-between; gap: 28px; font-size: 12px; line-height: 1.4; }
+.role { display: flex; justify-content: space-between; gap: 28px; font-size: 14px; line-height: 1.4; }
 .role h3 { font-size: inherit; line-height: inherit; letter-spacing: 0; }
 .role div > p:last-child { color: #888; margin-top: 10px; }
 .role-meta { text-align: right; flex-shrink: 0; }
