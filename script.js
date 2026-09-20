@@ -16,6 +16,12 @@ document.querySelectorAll("[data-link]").forEach((anchor) => {
   }
 });
 
+// Discourage saving the portrait through the browser's image menu.
+document.querySelectorAll(".portrait").forEach((portrait) => {
+  portrait.addEventListener("contextmenu", (event) => event.preventDefault());
+  portrait.addEventListener("dragstart", (event) => event.preventDefault());
+});
+
 // Put the two MOV files in the videos folder using these filenames.
 const projects = {
   llm: { title: "Local LLM Agentic System", video: "videos/project-llm.mov" },
