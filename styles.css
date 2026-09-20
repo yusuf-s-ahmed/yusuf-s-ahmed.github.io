@@ -58,7 +58,7 @@ footer { display: flex; justify-content: space-between; align-items: start; gap:
 .footer-contact > a { text-decoration: none; }
 .footer-socials { display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px; }
 @media (min-width: 641px) {
-  .role { font-size: 15px; }
+  .role { font-size: 17px; }
   .location, .social-links { font-size: 18px; }
 }
 @media (max-width: 1100px) {
