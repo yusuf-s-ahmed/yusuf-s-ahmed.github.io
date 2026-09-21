@@ -60,6 +60,41 @@ document.querySelectorAll(".image-slot img").forEach((img) => {
   if (img.complete) update();
 });
 
+// A tapered ink underline follows the currently active section heading.
+const highlightedSections = [...document.querySelectorAll('main > section[id]')];
+highlightedSections.forEach((section) => {
+  const heading = section.querySelector('h2');
+  heading.classList.add('section-heading');
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'heading-highlight');
+  svg.setAttribute('viewBox', '0 0 200 12');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('focusable', 'false');
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'M2 7 C42 3 78 4 113 5 C145 6 174 4 198 3 C177 7 147 9 113 8 C76 7 40 6 2 7 Z');
+  svg.appendChild(path);
+  heading.appendChild(svg);
+});
+const updateActiveSection = () => {
+  let next = highlightedSections[0];
+  highlightedSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= window.innerHeight * 0.4) next = section;
+  });
+  const pageHeight = document.documentElement.scrollHeight;
+  if (pageHeight > window.innerHeight && window.scrollY + window.innerHeight >= pageHeight - 4) {
+    next = highlightedSections[highlightedSections.length - 1];
+  }
+  highlightedSections.forEach((section) => {
+    const heading = section.querySelector('h2');
+    const bounds = heading.getBoundingClientRect();
+    const inView = bounds.bottom > 0 && bounds.top < window.innerHeight;
+    heading.classList.toggle('is-offscreen', !inView);
+    heading.classList.toggle('is-active', section === next && inView);
+  });
+};
+updateActiveSection();
+
 // Reveal on downward scroll; upward scroll shows content immediately.
 {
   const revealElements = document.querySelectorAll(
@@ -75,6 +110,7 @@ document.querySelectorAll(".image-slot img").forEach((img) => {
 
   const updateReveals = () => {
     framePending = false;
+    updateActiveSection();
     const scrollY = Math.max(0, window.scrollY);
     if (scrollY !== lastScrollY) scrollingUp = scrollY < lastScrollY;
     lastScrollY = scrollY;
