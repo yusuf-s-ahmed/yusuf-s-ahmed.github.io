@@ -95,3 +95,23 @@ document.querySelectorAll(".image-slot img").forEach((img) => {
   img.addEventListener("error", update);
   if (img.complete) update();
 });
+
+// Reveal content when it enters the viewport, including when scrolling back up.
+if ("IntersectionObserver" in window) {
+  const revealElements = document.querySelectorAll(
+    ".intro > div, .about > *, .portfolio > h2, .project, .experience > h2, .role, .education > h2, .qualification, footer > *"
+  );
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("is-visible", entry.isIntersecting && entry.intersectionRatio >= 0.12);
+    });
+  }, { threshold: [0, 0.12], rootMargin: "-32px 0px -48px 0px" });
+
+  revealElements.forEach((element) => {
+    const bounds = element.getBoundingClientRect();
+    const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight - 48) - Math.max(bounds.top, 32));
+    element.classList.toggle("is-visible", bounds.height > 0 && visibleHeight / bounds.height >= 0.12);
+    element.classList.add("scroll-reveal");
+    revealObserver.observe(element);
+  });
+}
