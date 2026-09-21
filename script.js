@@ -96,22 +96,40 @@ document.querySelectorAll(".image-slot img").forEach((img) => {
   if (img.complete) update();
 });
 
-// Reveal content when it enters the viewport, including when scrolling back up.
-if ("IntersectionObserver" in window) {
+// Reveal on downward scroll; upward scroll shows content immediately.
+{
   const revealElements = document.querySelectorAll(
     ".intro > div, .about > *, .portfolio > h2, .project, .experience > h2, .role, .education > h2, .qualification, footer > *"
   );
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      entry.target.classList.toggle("is-visible", entry.isIntersecting && entry.intersectionRatio >= 0.12);
-    });
-  }, { threshold: [0, 0.12], rootMargin: "-32px 0px -48px 0px" });
-
+  let lastScrollY = Math.max(0, window.scrollY);
+  let scrollingUp = false;
+  let framePending = false;
   revealElements.forEach((element) => {
-    const bounds = element.getBoundingClientRect();
-    const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight - 48) - Math.max(bounds.top, 32));
-    element.classList.toggle("is-visible", bounds.height > 0 && visibleHeight / bounds.height >= 0.12);
+    element.classList.toggle("is-visible", element.getBoundingClientRect().top < window.innerHeight);
     element.classList.add("scroll-reveal");
-    revealObserver.observe(element);
   });
+
+  const updateReveals = () => {
+    framePending = false;
+    const scrollY = Math.max(0, window.scrollY);
+    if (scrollY !== lastScrollY) scrollingUp = scrollY < lastScrollY;
+    lastScrollY = scrollY;
+    document.documentElement.classList.toggle("scrolling-up", scrollingUp);
+    revealElements.forEach((element) => {
+      const top = element.getBoundingClientRect().top;
+      if (top >= window.innerHeight) {
+        element.classList.remove("is-visible");
+      } else if (scrollingUp || top < window.innerHeight - 48) {
+        element.classList.add("is-visible");
+      }
+    });
+  };
+  const scheduleReveals = () => {
+    if (!framePending) {
+      framePending = true;
+      window.requestAnimationFrame(updateReveals);
+    }
+  };
+  window.addEventListener("scroll", scheduleReveals, { passive: true });
+  window.addEventListener("resize", scheduleReveals);
 }
