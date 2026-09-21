@@ -39,51 +39,15 @@ document.querySelectorAll(".portrait").forEach((portrait) => {
   portrait.addEventListener("dragstart", (event) => event.preventDefault());
 });
 
-// Put the two MOV files in the videos folder using these filenames.
-const projects = {
-  llm: { title: "Local LLM Agentic System", video: "videos/project-llm.mov" },
-  molecules: { title: "Molecular Classification Experiment", video: "videos/project-molecules.mov" },
-};
-
-const dialog = document.querySelector("#project-dialog");
-const video = document.querySelector("#project-video");
-const videoStatus = document.querySelector("#video-status");
-let projectTrigger;
-
-document.querySelectorAll("[data-project]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const key = button.dataset.project;
-    const project = projects[key];
-    projectTrigger = button;
-    document.querySelector("#dialog-title").textContent = project.title;
-    document.querySelector("#project-github").href = links[key];
-    videoStatus.hidden = true;
-    video.setAttribute("aria-label", `${project.title} demonstration video`);
-    video.src = project.video;
-    video.load();
-    dialog.showModal();
-    document.body.classList.add("modal-open");
+// Native inline players handle playback, seeking, volume and fullscreen.
+const projectVideos = document.querySelectorAll('.project-video');
+projectVideos.forEach((video) => {
+  const status = video.parentElement.querySelector('.video-status');
+  video.addEventListener('error', () => { status.hidden = false; });
+  video.addEventListener('playing', () => { status.hidden = true; });
+  video.addEventListener('play', () => {
+    projectVideos.forEach((other) => { if (other !== video) other.pause(); });
   });
-});
-
-video.addEventListener("error", () => {
-  if (dialog.open && video.hasAttribute("src")) videoStatus.hidden = false;
-});
-video.addEventListener("loadeddata", () => { videoStatus.hidden = true; });
-document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
-  const bounds = dialog.getBoundingClientRect();
-  if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) {
-    dialog.close();
-  }
-});
-// Native dialog handles Escape and keeps keyboard focus inside the popup.
-dialog.addEventListener("close", () => {
-  video.pause();
-  video.removeAttribute("src");
-  video.load();
-  document.body.classList.remove("modal-open");
-  projectTrigger?.focus();
 });
 
 // Keep the layout tidy until you add your three image files.

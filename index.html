@@ -8,8 +8,8 @@
   <link rel="icon" type="image/jpeg" href="images/profile.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
-  <link rel="stylesheet" href="styles.css?v=scroll-5">
-  <script src="script.js?v=scroll-5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=inline-video-1">
+  <script src="script.js?v=inline-video-1" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -49,28 +49,28 @@
     <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading" tabindex="-1">
       <h2 id="portfolio-heading">Portfolio</h2>
       <article class="project">
-        <div class="project-image image-slot" data-placeholder="Local LLM project preview">
-          <img src="images/project-llm.png" alt="Stock price chart produced by the Local LLM Agentic System" width="460" height="320" loading="lazy">
+        <div class="project-media">
+          <video id="video-llm" class="project-video" src="videos/project-llm.mov" poster="images/project-llm.png" controls playsinline preload="none" width="460" height="320" aria-label="Local LLM Agentic System demonstration"></video>
+          <p class="video-status" role="status" hidden>This video could not be played. <a href="videos/project-llm.mov" target="_blank" rel="noopener noreferrer">Open video file</a>.</p>
         </div>
         <div class="project-details">
           <h3>Local LLM Agentic System</h3>
           <p>A multi-agent AI system that dynamically selects between internal data analysis, financial stock data from APIs, and web scraping to answer user questions.</p>
           <div class="project-actions">
-            <button type="button" class="project-link" data-project="llm" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Local LLM Agentic System project">View demo <span aria-hidden="true">→</span></button>
-            <a class="project-link project-link-secondary" data-link="llm" href="https://github.com/yusuf-s-ahmed/local-llm-agentic-system" target="_blank" rel="noopener noreferrer" aria-label="Source code for Local LLM Agentic System">Source code <span aria-hidden="true">→</span></a>
+            <a class="project-link" data-link="llm" href="https://github.com/yusuf-s-ahmed/local-llm-agentic-system" target="_blank" rel="noopener noreferrer" aria-label="Source code for Local LLM Agentic System">Source code <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </article>
       <article class="project">
-        <div class="project-image image-slot" data-placeholder="Molecular classification project preview">
-          <img src="images/project-molecules.png" alt="Molecular classification interface showing a correctly predicted molecule" width="460" height="320" loading="lazy">
+        <div class="project-media">
+          <video id="video-molecules" class="project-video" src="videos/project-molecules.mov" poster="images/project-molecules.png" controls playsinline preload="none" width="460" height="320" aria-label="Molecular Classification Experiment demonstration"></video>
+          <p class="video-status" role="status" hidden>This video could not be played. <a href="videos/project-molecules.mov" target="_blank" rel="noopener noreferrer">Open video file</a>.</p>
         </div>
         <div class="project-details">
           <h3>Molecular Classification Experiment</h3>
           <p>Reproducing a research paper using data from ChEMBL 30, generating chemical fingerprints for SVM and random forest machine learning models.</p>
           <div class="project-actions">
-            <button type="button" class="project-link" data-project="molecules" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Molecular Classification Experiment project">View demo <span aria-hidden="true">→</span></button>
-            <a class="project-link project-link-secondary" data-link="molecules" href="https://github.com/yusuf-s-ahmed/molecular-classification-experiment" target="_blank" rel="noopener noreferrer" aria-label="Source code for Molecular Classification Experiment">Source code <span aria-hidden="true">→</span></a>
+            <a class="project-link" data-link="molecules" href="https://github.com/yusuf-s-ahmed/molecular-classification-experiment" target="_blank" rel="noopener noreferrer" aria-label="Source code for Molecular Classification Experiment">Source code <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </article>
@@ -107,14 +107,5 @@
     </footer>
     
   </main>
-  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-heading">
-      <h2 id="dialog-title">Project preview</h2>
-      <button type="button" class="dialog-close" aria-label="Close project preview" autofocus>&times;</button>
-    </div>
-    <video id="project-video" controls playsinline preload="metadata" aria-label="Project demonstration video"></video>
-    <p id="video-status" class="video-status" role="status" hidden>Video coming soon. You can explore the project on GitHub below.</p>
-    <a id="project-github" class="dialog-github" target="_blank" rel="noopener noreferrer">GitHub link</a>
-  </dialog>
 </body>
 </html>
