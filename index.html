@@ -6,11 +6,24 @@
   <meta name="description" content="Yusuf S. Ahmed — computer science undergraduate in London working on AI systems and research.">
   <title>Yusuf S. Ahmed</title>
   <link rel="icon" type="image/jpeg" href="images/profile.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
   <link rel="stylesheet" href="styles.css?v=profile-1">
   <script src="script.js?v=profile-1" defer></script>
 </head>
 <body>
-  <header class="site-header"><a href="./">Yusuf S. Ahmed</a></header>
+  <header class="site-header">
+    <a href="./" target="_blank" rel="noopener noreferrer">Yusuf S. Ahmed</a>
+    <details class="section-menu">
+      <summary aria-label="Section navigation"><span></span><span></span><span></span></summary>
+      <nav aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </nav>
+    </details>
+  </header>
   <main id="main">
     <section class="intro" aria-labelledby="name">
       <div class="identity">
@@ -20,19 +33,20 @@
         <h1 id="name">Yusuf S. Ahmed</h1>
       </div>
       <div class="intro-details">
-        <div><p class="tagline">I work on AI systems and research.</p><p class="location">London, United Kingdom</p></div>
-        <nav class="social-links" aria-label="Social profiles">
-          <a data-link="github" aria-disabled="true">GitHub</a><span aria-hidden="true"> / </span><a data-link="linkedin" aria-disabled="true">LinkedIn</a>
+        <div><p class="tagline">I work on data, AI and systems.</p><p class="location">London, United Kingdom</p></div>
+        <nav class="social-links social-icons" aria-label="Social profiles">
+          <a data-link="github" href="https://github.com/yusuf-s-ahmed" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a data-link="linkedin" href="https://www.linkedin.com/in/yusuf-s-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
         </nav>
       </div>
     </section>
 
-    <section class="about" aria-labelledby="about-heading">
+    <section id="about" class="about" aria-labelledby="about-heading" tabindex="-1">
       <h2 id="about-heading">About</h2>
       <p>I'm a computer science undergraduate based in London, who has applied experience with software systems and research projects.</p>
     </section>
 
-    <section class="portfolio" aria-labelledby="portfolio-heading">
+    <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading" tabindex="-1">
       <h2 id="portfolio-heading">Portfolio</h2>
       <article class="project">
         <div class="project-image image-slot" data-placeholder="Local LLM project preview">
@@ -41,7 +55,10 @@
         <div class="project-details">
           <h3>Local LLM Agentic System</h3>
           <p>A multi-agent AI system that dynamically selects between internal data analysis, financial stock data from APIs, and web scraping to answer user questions.</p>
-          <button type="button" class="project-link" data-project="llm" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Local LLM Agentic System project">View project <span aria-hidden="true">→</span></button>
+          <div class="project-actions">
+            <button type="button" class="project-link" data-project="llm" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Local LLM Agentic System project">View demo <span aria-hidden="true">→</span></button>
+            <a class="project-link project-link-secondary" data-link="llm" href="https://github.com/yusuf-s-ahmed/local-llm-agentic-system" target="_blank" rel="noopener noreferrer" aria-label="Source code for Local LLM Agentic System">Source code <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </article>
       <article class="project">
@@ -51,16 +68,19 @@
         <div class="project-details">
           <h3>Molecular Classification Experiment</h3>
           <p>Reproducing a research paper using data from ChEMBL 30, generating chemical fingerprints for SVM and random forest machine learning models.</p>
-          <button type="button" class="project-link" data-project="molecules" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Molecular Classification Experiment project">View project <span aria-hidden="true">→</span></button>
+          <div class="project-actions">
+            <button type="button" class="project-link" data-project="molecules" aria-haspopup="dialog" aria-controls="project-dialog" aria-label="View Molecular Classification Experiment project">View demo <span aria-hidden="true">→</span></button>
+            <a class="project-link project-link-secondary" data-link="molecules" href="https://github.com/yusuf-s-ahmed/molecular-classification-experiment" target="_blank" rel="noopener noreferrer" aria-label="Source code for Molecular Classification Experiment">Source code <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </article>
     </section>
 
-    <section class="experience" aria-labelledby="experience-heading">
+    <section id="experience" class="experience" aria-labelledby="experience-heading" tabindex="-1">
       <h2 id="experience-heading">Experience</h2>
       <div class="experience-list">
-        <article class="role"><div><h3>AI Research Intern</h3><p>Confidential</p></div><div class="role-meta"><p>June 2026 - Present</p><p>Singapore</p></div></article>
         <article class="role"><div><h3>AI Systems Engineer</h3><p>City, University of London, Dep. of Engineering</p></div><div class="role-meta"><p>June 2026 - Present</p><p>London, UK</p></div></article>
+        <article class="role"><div><h3>AI Research Intern</h3><p>Confidential</p></div><div class="role-meta"><p>June 2026 - Present</p><p>Singapore</p></div></article>
         <article class="role"><div><h3>Cyber Path Student</h3><p>National CRC Group Ltd.</p></div><div class="role-meta"><p>May 2026 - Present</p><p>London, UK</p></div></article>
         <article class="role"><div><h3>Teaching Assistant</h3><p>BlueShift Education, CIC</p></div><div class="role-meta"><p>Nov. 2025 - July 2026</p><p>London, UK</p></div></article>
         <article class="role"><div><h3>Software Engineer Intern</h3><p>Sybertnetics AI, Inc.</p></div><div class="role-meta"><p>Sep. 2025 - Dec. 2025</p><p>Delaware, USA</p></div></article>
@@ -69,11 +89,20 @@
       </div>
     </section>
 
+    <section id="education" class="education" aria-labelledby="education-heading" tabindex="-1">
+      <h2 id="education-heading">Education</h2>
+      <div class="education-list">
+        <article class="qualification"><div><h3>Computer Science BSc (Hons)</h3><p>City, University of London</p></div><div class="institution"><p>Sep. 2024 - May 2027</p><p>London, UK</p></div></article>
+        <article class="qualification"><div><h3>A-Level Maths, Physics, Economics</h3><p>Townley Grammar School</p></div><div class="institution"><p>Sep. 2022 - June 2024</p><p>London, UK</p></div></article>
+        <article class="qualification"><div><h3>GCSEs</h3><p>The John Roan School</p></div><div class="institution"><p>Sep. 2017 - June 2022</p><p>London, UK</p></div></article>
+      </div>
+    </section>
+
     <footer>
       <p class="footer-name">Yusuf S. Ahmed</p>
       <div class="footer-contact">
-        <a href="mailto:yusufahmed101@icloud.com">yusufahmed101@icloud.com</a>
-        <nav class="footer-socials social-links" aria-label="Footer social profiles"><a data-link="github" aria-disabled="true">GitHub</a><a data-link="linkedin" aria-disabled="true">LinkedIn</a></nav>
+        <a href="mailto:yusufahmed101@icloud.com" target="_blank" rel="noopener noreferrer">yusufahmed101@icloud.com</a>
+        <nav class="footer-socials social-links" aria-label="Footer social profiles"><a data-link="github" target="_blank" rel="noopener noreferrer" aria-disabled="true">GitHub</a><a data-link="linkedin" target="_blank" rel="noopener noreferrer" aria-disabled="true">LinkedIn</a></nav>
       </div>
     </footer>
     

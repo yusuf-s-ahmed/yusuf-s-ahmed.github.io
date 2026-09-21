@@ -1,3 +1,20 @@
+const sectionMenu = document.querySelector(".section-menu");
+sectionMenu.querySelectorAll("nav a").forEach((anchor) => {
+  anchor.addEventListener("click", () => {
+    sectionMenu.open = false;
+    document.querySelector(anchor.hash).focus({ preventScroll: true });
+  });
+});
+document.addEventListener("click", (event) => {
+  if (!sectionMenu.contains(event.target)) sectionMenu.open = false;
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && sectionMenu.open) {
+    sectionMenu.open = false;
+    sectionMenu.querySelector("summary").focus();
+  }
+});
+
 // Paste your full profile and project URLs between the quotation marks.
 const links = {
   github: "https://github.com/yusuf-s-ahmed",
