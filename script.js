@@ -119,7 +119,7 @@ document.querySelectorAll(".image-slot img").forEach((img) => {
       const top = element.getBoundingClientRect().top;
       if (top >= window.innerHeight) {
         element.classList.remove("is-visible");
-      } else if (scrollingUp || top < window.innerHeight - 48) {
+      } else {
         element.classList.add("is-visible");
       }
     });

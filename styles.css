@@ -1,8 +1,10 @@
 :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #080808; background: #fff; font-synthesis: none; }
 * { box-sizing: border-box; }
-.scroll-reveal { opacity: 0; filter: blur(6px); transition: opacity 700ms ease, filter 700ms ease; }
+.scroll-reveal { opacity: 0; filter: blur(6px); transition: opacity 1100ms ease, filter 1100ms ease; }
 .scroll-reveal.is-visible, .scroll-reveal:focus-within { opacity: 1; filter: blur(0); }
-.scrolling-up .scroll-reveal { opacity: 1; filter: none; transition: none; }
+.scroll-reveal:not(.is-visible):not(:focus-within) { transition: none; }
+.scrolling-up .scroll-reveal { transition: none; }
+.scrolling-up .scroll-reveal.is-visible { filter: none; }
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal { filter: none; transition: opacity 150ms ease; }
 }
