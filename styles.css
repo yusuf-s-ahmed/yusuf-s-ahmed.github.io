@@ -68,9 +68,9 @@ h2, h3 { font-size: 28px; line-height: 1.25; letter-spacing: -.6px; }
 .experience::before { top: -62px; }
 .experience::after { bottom: -62px; }
 .education::after { bottom: -100px; }
-.about p { margin-top: 25px; color: #888; font-size: 18px; line-height: 1.5; }
+.about p { margin-top: 37px; color: #888; font-size: 18px; line-height: 1.5; }
 .portfolio { margin-top: 124px; }
-.project { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: 124px; align-items: start; margin-top: 62px; }
+.project { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: 124px; align-items: start; margin-top: 74px; }
 .project + .project { margin-top: 70px; }
 .project-media { min-width: 0; }
 .project-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
@@ -86,7 +86,7 @@ h2, h3 { font-size: 28px; line-height: 1.25; letter-spacing: -.6px; }
 .project-actions a.project-link:hover { background: #f5f5f5; }
 .video-status { margin-top: 16px; font-size: 14px; line-height: 1.5; color: #666; }
 .experience, .education { margin-top: 125px; }
-.experience-list, .education-list { margin-top: 63px; display: grid; gap: 65px; }
+.experience-list, .education-list { margin-top: 75px; display: grid; gap: 65px; }
 .role, .qualification { display: flex; justify-content: space-between; gap: 28px; font-size: 18px; line-height: 1.4; }
 .role h3, .qualification h3 { font-size: inherit; line-height: inherit; letter-spacing: 0; }
 .role div > p:last-child, .qualification div > p:last-child { color: #888; margin-top: 10px; }
@@ -125,15 +125,15 @@ footer { display: flex; justify-content: space-between; align-items: start; gap:
   .about p, .project-details p, .tagline { font-size: 16px; }
   .portfolio, .experience, .education { margin-top: 76px; }
   h2, h3 { font-size: 26px; }
-  .project { grid-template-columns: 1fr; gap: 25px; margin-top: 38px; }
+  .project { grid-template-columns: 1fr; gap: 25px; margin-top: 50px; }
   .project + .project { margin-top: 58px; }
   .project-details p { margin-top: 18px; line-height: 1.5; }
   .project-link { font-size: 9px; padding: 11px 15px; margin-top: 23px; }
   .project-actions { margin-top: 23px; }
-  .experience-list { margin-top: 38px; gap: 38px; }
+  .experience-list { margin-top: 50px; gap: 38px; }
   .role { gap: 14px; font-size: 14px; }
   .role-meta { max-width: 42%; }
-  .education-list { margin-top: 38px; gap: 38px; }
+  .education-list { margin-top: 50px; gap: 38px; }
   .qualification { gap: 14px; font-size: 14px; }
   .institution { max-width: 42%; }
   footer { margin-top: 95px; flex-direction: column; gap: 10px; padding-bottom: 38px; }
