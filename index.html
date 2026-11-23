@@ -1,24 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yusuf Salman Ahmed - computer science undergraduate in London working on AI systems and research.">
-  <title>Yusuf Salman Ahmed</title>
+  <title>Yusuf Salman Ahmed | Cybersecurity &amp; AI Systems</title>
+  <meta name="description" content="Yusuf Salman Ahmed (Yusuf Ahmed) is a final-year computer science undergraduate at City, University of London, working on cybersecurity and AI systems.">
+  <meta name="author" content="Yusuf Salman Ahmed">
+  <link rel="canonical" href="https://yusuf.me.uk/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://yusuf.me.uk/">
+  <meta property="og:title" content="Yusuf Salman Ahmed">
+  <meta property="og:description" content="Final-year computer science undergraduate at City, University of London, working on cybersecurity and AI systems.">
+  <meta property="og:image" content="https://yusuf.me.uk/images/profile.jpeg">
+  <meta property="og:site_name" content="Yusuf Salman Ahmed">
+  <meta property="profile:first_name" content="Yusuf">
+  <meta property="profile:last_name" content="Ahmed">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yusuf Salman Ahmed",
+    "alternateName": "Yusuf Ahmed",
+    "givenName": "Yusuf",
+    "additionalName": "Salman",
+    "familyName": "Ahmed",
+    "url": "https://yusuf.me.uk/",
+    "image": "https://yusuf.me.uk/images/profile.jpeg",
+    "description": "Final-year computer science undergraduate working on cybersecurity and AI systems.",
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "City, University of London" },
+    "knowsAbout": ["Cybersecurity", "Artificial intelligence", "AI agents", "Prompt injection", "Machine learning"],
+    "sameAs": [
+      "https://github.com/yusuf-s-ahmed",
+      "https://www.linkedin.com/in/yusuf-s-ahmed"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/jpeg" href="images/profile.jpeg">
+  <link rel="preload" href="fonts/cmunrm.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
-  <link rel="stylesheet" href="styles.css?v=spacing-3">
-  <script src="script.js?v=underline-2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=site-4">
+  <script src="script.js?v=site-3" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a href="./" target="_blank" rel="noopener noreferrer">Yusuf Salman Ahmed</a>
+    <a href="./">Yusuf Ahmed</a>
     <details class="section-menu">
       <summary aria-label="Section navigation"><span></span><span></span><span></span></summary>
       <nav aria-label="Page sections">
         <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
+        <!-- <a href="#portfolio">Portfolio</a> -->
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
       </nav>
@@ -28,12 +61,15 @@
     <section class="intro" aria-labelledby="name">
       <div class="identity">
         <div class="portrait image-slot" data-placeholder="Profile photo">
-          <img src="images/profile.jpeg" alt="Yusuf Salman Ahmed" width="110" height="110" draggable="false">
+          <img src="images/profile.jpeg" alt="Portrait of Yusuf Salman Ahmed" width="110" height="110" draggable="false">
         </div>
-        <h1 id="name">Yusuf Salman Ahmed</h1>
+        <h1 id="name">Yusuf Ahmed</h1>
       </div>
       <div class="intro-details">
-        <div><p class="tagline">I work on AI and security.</p><p class="location">London, United Kingdom</p></div>
+        <div>
+          <p class="tagline">Final-year computer science undergraduate working on cybersecurity and AI systems.</p>
+          <p class="location">City, University of London | London, United Kingdom</p>
+        </div>
         <nav class="social-links social-icons" aria-label="Social profiles">
           <a data-link="github" href="https://github.com/yusuf-s-ahmed" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
           <a data-link="linkedin" href="https://www.linkedin.com/in/yusuf-s-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
@@ -43,9 +79,11 @@
 
     <section id="about" class="about" aria-labelledby="about-heading" tabindex="-1">
       <h2 id="about-heading">About</h2>
-      <p>I'm a London-based computer science undergraduate interested in how AI systems are built, and how they can be made secure. I've worked across machine learning and security, from building agentic systems and research pipelines to network vulnerability assessments. My dissertation looks at defending LLM-based systems against prompt injection.</p>
+      <p>My work focuses on how intelligent systems can be made secure and how they are engineered. I have built and researched agentic systems in production and academia, developed machine learning models for drug discovery, and carried out network vulnerability assessments. My dissertation examines defending AI agents against indirect prompt injection using adaptive routing and quarantined LLMs.</p>
     </section>
 
+    <!-- PORTFOLIO (hidden for now). To bring it back, delete this comment line and the closing marker
+         after </section>, and uncomment the Portfolio link in the header menu.
     <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading" tabindex="-1">
       <h2 id="portfolio-heading">Portfolio</h2>
       <article class="project">
@@ -55,7 +93,7 @@
         </div>
         <div class="project-details">
           <h3>Local LLM Agentic System</h3>
-          <p>A multi-agent AI system that dynamically selects between internal data analysis, financial stock data from APIs, and web scraping to answer user questions.</p>
+          <p>A multi-agent AI system that dynamically selects between internal data analysis, financial stock data retrieved from APIs, and web scraping to answer user questions.</p>
           <div class="project-actions">
             <a class="project-link" data-link="llm" href="https://github.com/yusuf-s-ahmed/local-llm-agentic-system" target="_blank" rel="noopener noreferrer" aria-label="Source code for Local LLM Agentic System">Source code <span aria-hidden="true">→</span></a>
           </div>
@@ -68,44 +106,140 @@
         </div>
         <div class="project-details">
           <h3>Molecular Classification Experiment</h3>
-          <p>Reproducing a research paper using data from ChEMBL 30, generating chemical fingerprints for SVM and random forest machine learning models.</p>
+          <p>A reproduction of a published study using ChEMBL&nbsp;30 data, generating chemical fingerprints as features for support vector machine and random forest classifiers.</p>
           <div class="project-actions">
             <a class="project-link" data-link="molecules" href="https://github.com/yusuf-s-ahmed/molecular-classification-experiment" target="_blank" rel="noopener noreferrer" aria-label="Source code for Molecular Classification Experiment">Source code <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </article>
     </section>
+    END PORTFOLIO -->
 
     <section id="experience" class="experience" aria-labelledby="experience-heading" tabindex="-1">
       <h2 id="experience-heading">Experience</h2>
       <div class="experience-list">
-        <article class="role"><div><h3>Cyber Path Student</h3><p>National CRC Group Ltd.</p></div><div class="role-meta"><p>Feb. 2026 - Present</p><p>London, UK</p></div></article>
-        <article class="role"><div><h3>AI Systems Engineer</h3><p>City, University of London, Dep. of Engineering</p></div><div class="role-meta"><p>June 2026 - Present</p><p>London, UK</p></div></article>
-        <article class="role"><div><h3>AI Research Intern</h3><p>Confidential</p></div><div class="role-meta"><p>June 2026 - Oct. 2026</p><p>Singapore</p></div></article>
-        <article class="role"><div><h3>Teaching Assistant</h3><p>BlueShift Education, CIC</p></div><div class="role-meta"><p>Nov. 2025 - July 2026</p><p>London, UK</p></div></article>
-        <article class="role"><div><h3>Software Engineer Intern</h3><p>Sybertnetics AI, Inc.</p></div><div class="role-meta"><p>Sep. 2025 - Dec. 2025</p><p>Delaware, USA</p></div></article>
-        <article class="role"><div><h3>Data Analyst</h3><p>Largence Group Ltd.</p></div><div class="role-meta"><p>Apr. 2025 - Aug. 2025</p><p>Cambridge, UK</p></div></article>
-        <article class="role"><div><h3>Software Engineer</h3><p>Vital Therapy Ltd.</p></div><div class="role-meta"><p>Sep. 2024 - Mar. 2025</p><p>London, UK</p></div></article>
+        <article class="role">
+          <div>
+            <h3>Cyber Path Student</h3><p class="org"><a class="org-link" data-link="ncrc" target="_blank" rel="noopener noreferrer" aria-disabled="true">National Cyber Resilience Centre Group Ltd.</a></p><p class="summary">Internal vulnerability assessment of a precision-engineering company&rsquo;s network, covering industrial control systems, databases and Windows devices.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Conducted an internal vulnerability assessment from a Linux VM using Raspberry Pi hardware, mapping active devices across a 512-address subnet to identify 15+ security risks for a precision-engineering client company.</li>
+                <li>Assessed industrial control systems, MS SQL Server databases and Windows devices using Nmap, Nessus and Linux CLIs, verifying 6+ critical vulnerabilities through host discovery, service enumeration and network mapping.</li>
+                <li>Reported to a senior cybersecurity supervisor through weekly stand-up meetings to produce a client-ready security assessment report, communicating findings to technical and non-technical stakeholders.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>Feb. 2026 &ndash; Present</p><p>London, UK</p></div>
+        </article>
+        <article class="role">
+          <div>
+            <h3>AI Systems Engineer</h3><p class="org"><a class="org-link" data-link="city-engineering" target="_blank" rel="noopener noreferrer" aria-disabled="true">Department of Engineering, City, University of London</a></p><p class="summary">An agentic AI assessment service on AWS that routes student submissions to specialist agents for evaluation.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Developed an AI assessment microservice using Python, PostgreSQL and AWS Lambda to analyse student performance across exam papers, deploying specialist AI agents to evaluate submissions from 160+ students.</li>
+                <li>Engineered an agentic orchestration layer using Pydantic AI and LLMs to route multimodal submissions to 4+ specialist agents for text, graph, circuit and equation analysis, enforcing strict output schemas.</li>
+                <li>Deployed features through CI/CD pipelines using GitHub Actions, collaborated through feature branching and code reviews, and contributed to AWS design decisions for scalability and reliability in an Agile team of 8 developers.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>Feb. 2026 &ndash; Present</p><p>London, UK</p></div>
+        </article>
+        <article class="role">
+          <div>
+            <h3>AI Research Intern</h3><p class="org">Confidential</p><p class="summary">A predictive drug-screening system combining 900+ machine learning models in a stacked ensemble.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Developed a predictive drug-screening system using Python and SQLite, creating a stacked ensemble architecture that combines 900+ diverse machine learning models across 18K+ chemical compounds using leave-one-out sampling.</li>
+                <li>Built and evaluated neural network and logistic regression meta-learners in PyTorch and scikit-learn to combine predictions from 600+ random forest base models, tuned with 10-fold grid search cross-validation.</li>
+                <li>Evaluated model performance using Matplotlib and Excel, producing technical reports and 20+ data visualisations presented to the Head of Cheminformatics.</li>
+                <li>Queried 2.1M+ compound-structure records with SQLite and converted open-source chemical data into machine-readable classification features using RDKit, NumPy and pandas.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>June 2026 &ndash; Oct. 2026</p><p>Singapore</p></div>
+        </article>
+        <article class="role">
+          <div>
+            <h3>Teaching Assistant</h3><p class="org"><a class="org-link" data-link="blueshift" target="_blank" rel="noopener noreferrer" aria-disabled="true">BlueShift Education, CIC</a></p><p class="summary">Supporting coding lessons in Scratch Jr and Minecraft Education Edition.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Assisted lessons on Scratch Jr and Minecraft Education Edition to strengthen students&rsquo; coding and problem-solving skills.</li>
+                <li>Explained technical concepts through live demonstrations, examples and interactive activities to maintain engagement.</li>
+                <li>Guided students through hands-on coding exercises, supporting debugging, problem-solving and collaboration.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>Nov. 2025 &ndash; July 2026</p><p>London, UK</p></div>
+        </article>
+        <article class="role">
+          <div>
+            <h3>Software Engineer Intern</h3><p class="org"><a class="org-link" data-link="sybertnetics" target="_blank" rel="noopener noreferrer" aria-disabled="true">Sybertnetics Artificial Intelligence, Inc.</a></p><p class="summary">A multi-agent AI prototype for autonomous web scraping and data retrieval with reasoning traceability.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Contributed to a multi-agent AI prototype within a team of 5 interns, using Python (Pydantic, Beautiful Soup 4) to autonomously execute web scraping and data retrieval tasks with reasoning traceability.</li>
+                <li>Reviewed technical materials for RunaLang, the company&rsquo;s emerging AI-native programming language written in C, aligning the proof of concept with intended use cases, deliverables and product direction.</li>
+                <li>Coordinated weekly intern meetings, delegated tasks based on technical strengths, and pair-programmed with teammates to resolve environment setup, debugging and integration issues.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>Sep. 2025 &ndash; Dec. 2025</p><p>Delaware, US</p></div>
+        </article>
+        <article class="role">
+          <div>
+            <h3>Data Analyst</h3><p class="org"><a class="org-link" data-link="largence" target="_blank" rel="noopener noreferrer" aria-disabled="true">Largence Group Ltd.</a></p><p class="summary">An NLP pipeline on AWS generating compliance scores for 250+ legal documents.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Developed an ETL data pipeline using Python, SQL and AWS to process 250+ legal documents, applying natural language processing to generate compliance scores and storing results in S3 for data warehousing.</li>
+                <li>Analysed customer feedback and social media data using pandas and Excel, producing insights on user experience and early traction that supported product refinement and design decisions.</li>
+                <li>Translated findings from ad-hoc analysis and data visualisations into actionable insights during weekly cross-functional meetings with engineering and finance teams.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="role-meta"><p>Apr. 2025 &ndash; Aug. 2025</p><p>Cambridge, UK</p></div>
+        </article>
       </div>
     </section>
 
     <section id="education" class="education" aria-labelledby="education-heading" tabindex="-1">
       <h2 id="education-heading">Education</h2>
       <div class="education-list">
-        <article class="qualification"><div><h3>Computer Science BSc (Hons)</h3><p>City, University of London</p></div><div class="institution"><p>Sep. 2024 - May 2027</p><p>London, UK</p></div></article>
-        <article class="qualification"><div><h3>A-Level Maths, Physics, Economics</h3><p>Townley Grammar School</p></div><div class="institution"><p>Sep. 2022 - June 2024</p><p>London, UK</p></div></article>
-        <article class="qualification"><div><h3>GCSEs</h3><p>The John Roan School</p></div><div class="institution"><p>Sep. 2017 - June 2022</p><p>London, UK</p></div></article>
+        <article class="qualification">
+          <div>
+            <h3>BSc (Hons) Computer Science</h3><p class="org"><a class="org-link" data-link="city" target="_blank" rel="noopener noreferrer" aria-disabled="true">City, University of London</a></p><p class="summary">Predicted First-Class Honours.</p>
+            <details class="more">
+              <summary><span class="more-open">Read more</span><span class="more-close">Read less</span></summary>
+              <ul>
+                <li>Final-year dissertation: <cite>Defending AI Agents Against Indirect Prompt Injection with Adaptive Routing and Quarantined LLMs</cite>.</li>
+                <li>Expected graduation: May 2027.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="institution"><p>Sep. 2024 &ndash; May 2027</p><p>London, UK</p></div>
+        </article>
+        <article class="qualification">
+          <div><h3>A-Levels in Mathematics, Physics and Economics</h3><p class="org"><a class="org-link" data-link="townley" target="_blank" rel="noopener noreferrer" aria-disabled="true">Townley Grammar School</a></p><p class="summary">Grades AAB.</p></div>
+          <div class="institution"><p>Sep. 2022 &ndash; June 2024</p><p>London, UK</p></div>
+        </article>
+        <article class="qualification">
+          <div><h3>GCSEs</h3><p class="org"><a class="org-link" data-link="john-roan" target="_blank" rel="noopener noreferrer" aria-disabled="true">The John Roan School</a></p><p class="summary">Nine GCSEs at grades 9&ndash;6.</p></div>
+          <div class="institution"><p>Sep. 2017 &ndash; June 2022</p><p>London, UK</p></div>
+        </article>
       </div>
     </section>
 
     <footer>
       <p class="footer-name">&copy; 2026 Yusuf Salman Ahmed. All rights reserved.</p>
       <div class="footer-contact">
-        <a href="mailto:yusufahmed101@icloud.com" target="_blank" rel="noopener noreferrer">yusuf@yusuf.me.uk</a>
+        <a href="mailto:yusufahmed101@icloud.com">yusufahmed101@icloud.com</a>
         <nav class="footer-socials social-links" aria-label="Footer social profiles"><a data-link="github" target="_blank" rel="noopener noreferrer" aria-disabled="true">GitHub</a><a data-link="linkedin" target="_blank" rel="noopener noreferrer" aria-disabled="true">LinkedIn</a></nav>
       </div>
     </footer>
-    
   </main>
 </body>
 </html>

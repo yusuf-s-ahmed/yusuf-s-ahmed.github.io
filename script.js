@@ -21,6 +21,16 @@ const links = {
   linkedin: "https://www.linkedin.com/in/yusuf-s-ahmed",
   llm: "https://github.com/yusuf-s-ahmed/local-llm-agentic-system",
   molecules: "https://github.com/yusuf-s-ahmed/molecular-classification-experiment",
+
+  // Organisation pages. Names stay as plain text until a URL is added.
+  ncrc: "https://nationalcrcgroup.co.uk/cyber-path/",               // National Cyber Resilience Centre Group Ltd.
+  "city-engineering": "https://www.citystgeorges.ac.uk/about/schools/science-technology/engineering", // Department of Engineering, City, University of London
+  blueshift: "https://www.blueshift.education/",          // BlueShift Education, CIC
+  sybertnetics: "https://www.crunchbase.com/organization/sybertnetics",       // Sybertnetics Artificial Intelligence, Inc.
+  largence: "https://largence.com/",           // Largence Group Ltd.
+  city: "https://www.citystgeorges.ac.uk/",               // City, University of London
+  townley: "https://www.townleygrammar.org.uk/",            // Townley Grammar School
+  "john-roan": "https://www.thejohnroanschool.org.uk/",        // The John Roan School
 };
 
 document.querySelectorAll("[data-link]").forEach((anchor) => {
@@ -28,7 +38,7 @@ document.querySelectorAll("[data-link]").forEach((anchor) => {
   if (url) {
     anchor.href = url;
     anchor.removeAttribute("aria-disabled");
-  } else {
+  } else if (!anchor.classList.contains("org-link")) {
     anchor.title = "Link not added yet";
   }
 });
@@ -50,7 +60,7 @@ projectVideos.forEach((video) => {
   });
 });
 
-// Keep the layout tidy until you add your three image files.
+// Keep the layout tidy if an image file is missing.
 document.querySelectorAll(".image-slot img").forEach((img) => {
   const update = () => {
     img.parentElement.classList.toggle("is-missing", img.naturalWidth === 0);
